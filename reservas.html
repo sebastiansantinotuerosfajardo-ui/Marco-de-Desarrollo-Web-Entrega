@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Ruedas - Reserva de Paquetes</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Iconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/reservas.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+
+  <div id="encabezado"></div>
+
+  <section class="bg-blue-600 text-white py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">RESERVAS PARA PAQUETES</h2>
+      <h3 class="text-xl md:text-2xl font-medium">Cargando ...</h3>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-6">
+      <form id="form-reserva" class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+        
+        <div>
+          <label class="block mb-2 font-semibold">Nombres completos</label>
+          <input type="text" required 
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold">Correo electrónico</label>
+          <input type="email" required 
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold">Seleccione su destino</label>
+          <select required 
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">-- Seleccione un destino --</option>
+            <option value="cusco">Cusco</option>
+            <option value="arequipa">Arequipa</option>
+            <option value="puno">Puno</option>
+            <option value="huaraz">Huaraz</option>
+            <option value="selva">Selva Central</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold">Teléfono</label>
+          <input type="text" required 
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold">Número de personas</label>
+          <input type="number" min="1" required 
+                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+        </div>
+
+        <div>
+          <label class="block mb-2 font-semibold">Mensaje</label>
+          <textarea placeholder="Escribe tu mensaje aquí..." rows="5" required
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <button type="submit" 
+                class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition">
+          Enviar reserva
+        </button>
+
+        <div id="estado-formulario" class="text-center mt-4 text-green-600 font-semibold"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer cargado dinámicamente -->
+  <div id="footer"></div>
+
+</body>
+</html>
